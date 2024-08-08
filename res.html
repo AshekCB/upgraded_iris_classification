@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result Page</title>
+    <style>
+        body {
+            background-image: url("https://getwallpapers.com/wallpaper/full/b/7/9/1441035-download-calming-hd-wallpaper-1920x1080.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1 {
+            
+            text-align: center;
+        }
+        img {
+            margin-top: 20px;
+            border-radius: 10px;
+            width: 200px;
+            height: 200px;
+            
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h1>The Predicted Species Of The Given Flower Specification is<br><br></h1>
+    {% if result == 0 %}
+        <img src="{{ url_for('static', filename='images/images/iris setosa.png') }}" alt="Iris Setosa">
+    {% elif result == 1 %}
+        <img src="{{ url_for('static', filename='images/images/iris versicolor.png') }}" alt="Iris Versicolor">
+    {% elif result == 2 %}
+        <img src="{{ url_for('static', filename='images/images/iris virginica.png') }}" alt="Iris Virginica">
+    {% endif %}
+    </center>
+</body>
+</html>
