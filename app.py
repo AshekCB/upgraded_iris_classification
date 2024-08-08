@@ -1,5 +1,5 @@
 from flask import Flask,render_template,request
-import mlmodels.knn_model as model
+import knn_model as model
 
 
 app=Flask(__name__)
